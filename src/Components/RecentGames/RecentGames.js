@@ -24,7 +24,7 @@ const games = [
 const RecentGames = () => {
   const settings = {
     dots: false,
-    arrows: false,
+    arrows: true,
     infinite: true,
     autoplay: true,
     autoplaySpeed: 5000,
