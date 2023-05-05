@@ -7,7 +7,7 @@ const GameCard = () => {
       <div className="px-4 sm:px-6 lg:px-8 md:flex mb-[42px]">
         <div className="w-full game-card rounded-lg shadow ">
           <a href="#">
-            <h5 className="game-heading ml-[40px] mt-[47px]">
+            <h5 className="p-5 md:p-0 game-heading ml-[40px] mt-[47px]">
               This will be the description for the Game, which could be in
               detail as well.{" "}
             </h5>
