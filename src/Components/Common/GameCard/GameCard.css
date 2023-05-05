@@ -1,0 +1,25 @@
+.game-card {
+  background: linear-gradient(
+    90deg,
+    #30506c 45.64%,
+    #386382 66.28%,
+    rgba(56, 99, 130, 0) 87.77%
+  );
+}
+.game-heading {
+  width: 679px;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 38px;
+  color: #ffffff;
+
+  /* Media query for screens 768px and smaller */
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    font-size: 24px;
+    line-height: 28px !important;
+    margin-left: 20px !important;
+    margin-top: 20px !important;
+  }
+}
