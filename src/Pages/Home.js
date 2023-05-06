@@ -19,6 +19,7 @@ const Home = () => {
     const newData = { appLocation, gameDetail, gameUrl };
 
     setData(prevData => [...prevData, newData]);
+    
     setWhatsNew(true);
   };
 
@@ -41,7 +42,7 @@ const Home = () => {
           </button>
         </div>
 
-        {whatsNew && data &&
+        {whatsNew && data.length > 0 &&
           data.map((item, index) => (
             <div key={index}>
               <GameCard game_url={item.gameUrl}  game_detail={item.gameDetail} game_location={item.appLocation} />
