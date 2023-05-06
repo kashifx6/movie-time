@@ -1,4 +1,4 @@
-import React,{useState , useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import GameCard from "../Components/Common/GameCard/GameCard";
 
 const Applications = () => {
@@ -17,7 +17,7 @@ const Applications = () => {
 
     const newData = { appLocation, gameDetail, gameUrl };
 
-    setData(prevData => [...prevData, newData]);
+    setData((prevData) => [...prevData, newData]);
     setWhatsNew(true);
   };
 
@@ -35,16 +35,18 @@ const Applications = () => {
             WHAT'S NEW
           </button>
         </div>
-        {whatsNew && data &&
+        {whatsNew &&
+          data &&
           data.map((item, index) => (
             <div key={index}>
-              <GameCard game_url={item.gameUrl}  game_detail={item.gameDetail} game_location={item.appLocation} />
+              <GameCard
+                game_url={item.gameUrl}
+                game_detail={item.gameDetail}
+                game_location={item.appLocation}
+              />
             </div>
           ))}
-          
-        <GameCard game_url="asd" game_detail="asd" game_location="asd" />
       </div>
-      <GameCard />
     </div>
   );
 };
