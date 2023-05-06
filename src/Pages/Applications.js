@@ -9,15 +9,18 @@ const Applications = () => {
     const storedData = JSON.parse(localStorage.getItem("data")) || [];
     setData(storedData);
   }, []);
-
+  const handleGetStarted = () => {
+    setWhatsNew(false);
+  };
   const handleNewGames = () => {
     const appLocation = localStorage.getItem("appLocation");
     const gameDetail = localStorage.getItem("gameDetail");
     const gameUrl = localStorage.getItem("gameUrl");
 
-    const newData = { appLocation, gameDetail, gameUrl };
-
-    setData((prevData) => [...prevData, newData]);
+    if (appLocation || gameDetail || gameUrl) {
+      const newData = { appLocation, gameDetail, gameUrl };
+      setData((prevData) => [...prevData, newData]);
+    }
     setWhatsNew(!whatsNew);
   };
 
@@ -25,12 +28,19 @@ const Applications = () => {
     <div>
       <div className="mt-[115px]">
         <div className="flex justify-center mb-[42px]">
-          <button class="bg-gray-600 text-center text-white font-bold text-2xl py-2 px-4 rounded-full">
+          <button
+            onClick={handleGetStarted}
+            className={` ${
+              whatsNew ? "bg-transparent" : "bg-gray-600"
+            } text-center text-white font-bold text-2xl py-2 px-4 rounded-full`}
+          >
             GET STARTED
           </button>
           <button
             onClick={handleNewGames}
-            className="bg-transparent text-center text-white font-bold text-2xl py-2 px-4 rounded-full"
+            className={` ${
+              whatsNew ? "bg-gray-600" : "bg-transparent"
+            } text-center text-white font-bold text-2xl py-2 px-4 rounded-full`}
           >
             WHAT'S NEW
           </button>

@@ -18,11 +18,15 @@ const Home = () => {
 
     const newData = { appLocation, gameDetail, gameUrl };
 
-    setData((prevData) => [...prevData, newData]);
-
+    if (appLocation || gameDetail || gameUrl) {
+      const newData = { appLocation, gameDetail, gameUrl };
+      setData((prevData) => [...prevData, newData]);
+    }
     setWhatsNew(!whatsNew);
   };
-
+  const handleGetStarted = () => {
+    setWhatsNew(false);
+  };
   return (
     <div>
       <div className="mb-[42px] ">
@@ -31,12 +35,19 @@ const Home = () => {
 
       <div>
         <div className="flex justify-center mb-[42px]">
-          <button className="bg-gray-600 text-center text-white font-bold text-2xl py-2 px-4 rounded-full">
+          <button
+            onClick={handleGetStarted}
+            className={` ${
+              whatsNew ? "bg-transparent" : "bg-gray-600"
+            } text-center text-white font-bold text-2xl py-2 px-4 rounded-full`}
+          >
             GET STARTED
           </button>
           <button
             onClick={handleNewGames}
-            className="bg-transparent text-center text-white font-bold text-2xl py-2 px-4 rounded-full"
+            className={` ${
+              whatsNew ? "bg-gray-600" : "bg-transparent"
+            } text-center text-white font-bold text-2xl py-2 px-4 rounded-full`}
           >
             WHAT'S NEW
           </button>

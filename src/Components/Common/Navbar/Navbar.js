@@ -13,9 +13,9 @@ const Navbar = () => {
       style={{ backgroundImage: `url(${game_cover})` }}
     >
       <header>
-        <nav class=" border-gray-200 px-4 lg:px-6 py-2.5 ">
-          <div class="flex flex-wrap justify-end items-center">
-            <div class="flex items-center lg:order-2 p-4">
+        <nav className=" border-gray-200 px-4 lg:px-6 py-2.5 ">
+          <div className="flex flex-wrap justify-end items-center">
+            <div className="flex items-center lg:order-2 p-4">
               <img src={search} className="w-4 h-4 m-2 " />
               <img src={logo} className="w-4 h-4 m-2 " />
               <img src={minimize} className="w-4 h-4 m-2 " />

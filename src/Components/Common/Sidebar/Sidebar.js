@@ -14,11 +14,11 @@ const Sidebar = () => {
     <>
       <aside
         id="default-sidebar"
-        class="fixed top-0 left-0 z-40 w-[250px] h-screen transition-transform -translate-x-full sm:translate-x-0"
+        className="fixed top-0 left-0 z-40 w-[250px] h-screen transition-transform -translate-x-full sm:translate-x-0"
         aria-label="Sidebar"
       >
-        <div class="h-full flex flex-col justify-between px-3 py-4  bg-[#0E141B]">
-          <ul class=" text-normal	font-bold	">
+        <div className="h-full flex flex-col justify-between px-3 py-4  bg-[#0E141B]">
+          <ul className=" text-normal	font-bold	">
             <li className="mt-[10px]">
               <Link
                 to="/"
@@ -27,7 +27,7 @@ const Sidebar = () => {
                 )}`}
               >
                 <img src={homeIcon} className="w-4 h-4" />
-                <span class="ml-3">Home</span>
+                <span className="ml-3">Home</span>
               </Link>
             </li>
             <li className="mt-[10px]">
@@ -38,7 +38,7 @@ const Sidebar = () => {
                 )}`}
               >
                 <img src={applicationIcon} className="w-4 h-4" />
-                <span class="ml-3">Applications</span>
+                <span className="ml-3">Applications</span>
               </Link>
             </li>
             <li className="mt-[10px]">
@@ -49,7 +49,7 @@ const Sidebar = () => {
                 )}`}
               >
                 <img src={mediaIcon} className="w-4 h-4" />
-                <span class="ml-3">Media</span>
+                <span className="ml-3">Media</span>
               </Link>
             </li>
             <li className="mt-[10px]">
@@ -60,7 +60,7 @@ const Sidebar = () => {
                 )}`}
               >
                 <img src={downloadIcon} className="w-4 h-4" />
-                <span class="ml-3">Downloads</span>
+                <span className="ml-3">Downloads</span>
               </Link>
             </li>
             <li className="mt-[350px]">
@@ -71,7 +71,7 @@ const Sidebar = () => {
                 )}`}
               >
                 <img src={settingIcon} className="w-4 h-4" />
-                <span class="ml-3">Settings</span>
+                <span className="ml-3">Settings</span>
               </Link>
             </li>
           </ul>
