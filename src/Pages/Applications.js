@@ -35,18 +35,19 @@ const Applications = () => {
             WHAT'S NEW
           </button>
         </div>
-        {whatsNew &&
-          data &&
-          data.length > 0 &&
-          data.map((item, index) => (
-            <div key={index}>
-              <GameCard
-                game_url={item.gameUrl}
-                game_detail={item.gameDetail}
-                game_location={item.appLocation}
-              />
-            </div>
-          ))}
+        {whatsNew && data && data.length > 0 && 
+  data.map((item, index) => (
+    item.gameUrl && item.gameDetail && item.appLocation && (
+      <div key={index}>
+        <GameCard 
+          game_url={item.gameUrl} 
+          game_detail={item.gameDetail} 
+          game_location={item.appLocation} 
+        />
+      </div>
+    )
+  ))
+}
       </div>
     </div>
   );
