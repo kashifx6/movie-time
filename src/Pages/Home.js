@@ -20,7 +20,7 @@ const Home = () => {
 
     setData((prevData) => [...prevData, newData]);
 
-    setWhatsNew(true);
+    setWhatsNew(!whatsNew);
   };
 
   return (

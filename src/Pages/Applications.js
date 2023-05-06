@@ -18,7 +18,7 @@ const Applications = () => {
     const newData = { appLocation, gameDetail, gameUrl };
 
     setData((prevData) => [...prevData, newData]);
-    setWhatsNew(true);
+    setWhatsNew(!whatsNew);
   };
 
   return (
